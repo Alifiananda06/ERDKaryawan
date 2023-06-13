@@ -33,9 +33,13 @@ CREATE TABLE karyawan_project(
   # Menyambungkan Table
   
 ALTER TABLE karyawan ADD CONSTRAINT FOREIGN KEY (id_departemen) REFERENCES departemen (id_departemen);
+
 ALTER TABLE supervisor ADD CONSTRAINT FOREIGN KEY (id_departemen) REFERENCES departemen (id_departemen);
+
 ALTER TABLE supervisor ADD CONSTRAINT FOREIGN KEY (id_karyawan) REFERENCES karyawan (id_karyawan);
+
 ALTER TABLE karyawan_project ADD CONSTRAINT FOREIGN KEY (id_karyawan) REFERENCES karyawan (id_karyawan);
+
 ALTER TABLE karyawan ADD CONSTRAINT FOREIGN KEY (id_manager) REFERENCES karyawan (id_karyawan);
 
 
